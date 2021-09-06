@@ -49,7 +49,7 @@ button{
 li a{
   display: block;
   text-decoration: none;
-  color: #241869;
+  color: white;
   border-bottom-width: thin;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
@@ -93,15 +93,17 @@ li a svg{
 }
 
 .nav_menu_link:hover{
-  background: blue;
-  color: skyblue;
+  background:  rgba(33,33,33,.2) ;
+  color: white;
+  text-decoration: none;
 }
 
 /*FIN DEL HEADER*/
 
 main{
-  height: 200vh;
-
+  
+  padding-top: 80px;
+  background-color: #f2f2f2;
 
  
 }
@@ -115,7 +117,6 @@ main{
 
 .slider{
   display: flex;
-  margin-top: 80px;
   width: 400%;
   margin-left: -100%;
 }
@@ -127,10 +128,17 @@ main{
 
 
 .slider_img{
+  display: none;
+  width: 0%;
+}
+.slider_img_phone{
   display: block;
   width: 100%;
-  
 }
+
+
+
+
 
 .slider_btn{
   position: absolute;
@@ -187,6 +195,8 @@ main{
   
   position: relative;
   display: inline-block;
+  border-color: black;
+  border-width: 3px;
   padding: 15px 30px;
   color: #fff;
   letter-spacing: 4px;
@@ -204,10 +214,245 @@ main{
 
 
 
+/* MAIN DEL CONTACTO*/
+.container_contact{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+}
+
+.formulario{
+  grid-column: 3/span 6;
+}
+
+.contact_title{
+  text-align: center;
+}
+
+.input1{
+  border-radius: 40px !important;
+  width: 100%;
+  border-color: skyblue !important;
+}
+
+.casillero{
+  transition: 0.4s;
+}
+
+
+.casillero:hover{
+  transform: scale(1.05);
+}
+
+.btn_contacto_container{
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+.btn_contacto_container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.btn_contacto {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 150px;
+  height: 62px;
+  background-color: transparent;
+  border-radius: 31px;
+  border: none;
+
+  font-family: Ubuntu-Bold;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.btn_contacto::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: skyblue;
+  pointer-events: none;
+  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn_contacto:hover:before {
+  background-color: #403866;
+  width: calc(100% + 20px);
+}
+
+
+/* MAIN DEL CONTACTO*/
+
+/* MAIN DEL SHOP*/
+
+.container{
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 35vh;
+  
+}
+
+.small_cell{
+  margin-bottom: 40px;
+  display: grid;
+ 
+}
+
+.border_cell{
+  border-top: 5px solid black !important;
+  margin-top: 20px;
+}
+
+
+#border1{
+  grid-column: 1/span 4;
+}
+
+#border2{
+  grid-column: 5/span 2;
+}
+
+
+#border3{
+  grid-column: 7/span 4;
+}
+
+
+
+.container-products {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+.product {
+  background-image: url("../Fotos/fondoProductos.jpg");
+  border: 5px solid black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product__img{
+  width: 45%;
+  height: 45%;
+  object-fit: cover;
+}
+
+
+
+
+
+.product .product__content{
+  margin: 10px;
+  transition: 1s;
+}
+
+
+.product .product__content:hover{
+  transform: scale(1.05);
+}
+
+
+.product__description{
+  
+  font-family: "Avant Garde Bold",Arial,sans-serif;
+  color: #000;
+  position: sticky;
+  transition: 1s;
+}
+
+.product__title{
+  font-stretch: expanded;
+  font-weight: 5px;
+  text-align: center;
+}
+.product__price {
+  font-weight: bold;
+}
+
+.product .btn{
+  
+  position: relative;
+  display: inline-block;
+  border-color: black;
+  border-width: 3px;
+  color: black;
+  letter-spacing: 4px;
+  font-size: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.product .btn:hover{
+  background: skyblue;
+  box-shadow: 0 0 10px skyblue, 0 0 40px
+  skyblue, 0 0 80px skyblue;
+
+}
+
+
+
+
+
+/* FIN MAIN DEL SHOP*/
+
+
+
+
 
 
 /*FIN DEL MAIN*/
-
 footer{
   background-color: skyblue;
  
@@ -222,7 +467,7 @@ footer{
 }
 .escudo_arriba{
   height: 10vh;
-  background-color: white;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,6 +492,7 @@ footer{
 
 .marca_abajo a img{
   width: 10vh;
+  margin-left: 2vh;
   margin-right: 2vh;
 }
  .marca_abajo, .sponsors{
@@ -352,18 +598,17 @@ footer{
 @media (min-width:600px) {
 
   header {
-    padding: 8px;
+    padding: 0px;
     height: 60x;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;     
     background-color: skyblue;
     width: 100%;
     position: fixed;
-    z-index: +1;
   }
 
   .logo{
-    margin-top: 1px;
+    margin-top: 5px;
     width: 70px;
   }
 
@@ -373,14 +618,21 @@ footer{
 
   nav{
     grid-column: 2/ span 3;
+    display: flex !important;
   }
  
+.nav_menu_visible{
+  display: none;
+}
+  
   .nav_1 {
     display: flex;
     align-content: flex-start;
     justify-content: space-around;
     flex-direction: row;
     position:inherit;
+    margin:0;
+    padding: 0;
   }
 
   .nav_menu_item{
@@ -390,16 +642,24 @@ footer{
     line-height: 3px;
     list-style-type: none;
     display: flex;
-    text-decoration: none;
     flex-direction: column;
     align-items: center;
-  
 }
+
+
+.nav_menu_link{
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+}
+
+
 li a{
   
   border-bottom: none;
   
 }
+
 #inicio{
   border-top: none;
   
@@ -432,58 +692,68 @@ li a svg{
   #contacto_1{
     display: none;
   }
- 
+
+
+
+  /* main shop*/
+  .container-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  /*fin  main shop*/
+
+
 
 @media (min-width:1025px) {
   header {
-    padding: 8px;
-    height: 60x;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;     
-    background-color: skyblue;
-    width: 100%;
-    position: fixed;
-    z-index: +1;
-  }
-
-  .logo{
-    margin-top: 1px;
-    width: 70px;
-  }
-
-  .boton{
-    display: none;
   }
 
   nav{
     grid-column: 2/ span 4;
   }
- 
-  .nav_1 {
-    display: flex;
-    align-content: flex-start;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-top: 15px;
+
+  .nav_1{
+    justify-content:end;
   }
 
-  .nav_menu_item{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size:medium;
-    text-decoration: none;
-    line-height: 3px;
-    list-style-type: none;
-    text-decoration: none;
-    flex-direction: row;
-    align-items: center;
-  
+  .nav_menu_link{
+    padding-right: 3.3vh;
+    padding-left: 3.3vh;
+  }
+ 
+.nav_menu_link{
+  padding-top:26px ;
 }
  
 li a svg{
-  margin-bottom: 0px;
+  margin-left: 0px;;
+  margin-right: 5px;
+}
+
+li a{
   margin-right: 5px;
   margin-left: 0px;
 }
+
+ 
+  /* main inicio*/
+  .slider_img{
+    
+    display: block;
+    width: 100%;
+  }
+  .slider_img_phone{
+    display: none;
+    width: 0%;
+  }
+  /*fin main inicio*/
+
+
+
+
+
 
 a{
   display: contents;
