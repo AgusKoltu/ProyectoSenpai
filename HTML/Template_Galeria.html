@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Torpe</title>
+    <link rel="shortcut icon" href="../Fotos/torpe.png">
+   
+    <link rel="stylesheet" href="../CSS/GaleryStyle.css">
+    <link rel="stylesheet" href="../CSS/PrincipalStyle.css">
+    <script defer src="../JS/index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<script src="https://unpkg.com/feather-icons"></script>
+<body>
+    <header>
+        <img class="logo" src="../Fotos/Escudo.png" width = "100"  alt="rr">
+        <nav>
+            <ul class="nav_1 nav_menu_visible">
+                <li class= nav_menu_item>
+                    <a href="Principal.html" id="inicio" class="nav_menu_link"><i id="icono_1"  class="icon_menu" data-feather="home"></i>INICIO</a></li>
+                <li class= nav_menu_item>
+                    <a href="Estadisticas.html" class="nav_menu_link"><i id="icono_2" class="icon_menu" data-feather="file-text"></i>ESTADISTICAS</a></li>
+                <li class= nav_menu_item>
+                     <a href="Galeria.html" class="nav_menu_link" ><i id="icono_3" class="icon_menu" data-feather="camera"></i>GALERIA</a></li>
+                <li class= nav_menu_item>
+                     <a href="Shop.html" class="nav_menu_link"><i id="icono_4" class="icon_menu" data-feather="shopping-cart"></i>TIENDA</a></li>
+                <li class= nav_menu_item>
+                    <a href="Contacto.html" class="nav_menu_link"><i id="icono_5" class="icon_menu" data-feather="phone"></i>CONTACTO</a></li>
+            </ul>
+        </nav>
+        <a class="boton" href="#"><button><i class="icon_despliegue" data-feather="align-justify"></i></button> </a>
+    </header>
+
+    <main>    
+
+        <!-- CONTIENE MATERIAL EXTRAIDO DE https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+
+
+        <div class="main_galery">
+            <div id="title_galery">
+                <h2 style="text-align:center">Imagenes del partido</h2>
+            </div>
+
+            <div class="row_galery">
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto2Especial.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto11.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto12.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto13.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto14Especial.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto15.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+                </div>
+                <div class="column_galery">
+                    <img src="../Fotos/Template_Galery/Foto16.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal_galery">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal_content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto3.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">4 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto6.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto7.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">8 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto8.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto9.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">10 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto10.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">11 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto11.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">12 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto12.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">13 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto13.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">14 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto14.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">15 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto15.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">16 / 16</div>
+                    <img src="../Fotos/Template_Galery/Foto16.jpg" style="width:100%">
+                </div>
+
+                
+                
+                <a class="prev_galery" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next_galery" onclick="plusSlides(1)">&#10095;</a>
+
+                
+            </div>
+        </div>
+                <!-- ESTO ES LA PREVISUALIZACION DENTRO DEL MODAL, POR AHORA NO USAR.-->
+
+
+                <!-- 
+                    
+                    <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+
+                    
+                    
+                    
+                <div class="column_cursor">
+                <img class="demo cursor" src="../Fotos/jose.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column_cursor">
+                <img class="demo cursor" src="../Fotos/jose.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column_cursor">
+                <img class="demo cursor" src="../Fotos/jose.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column_cursor">
+                <img class="demo cursor" src="../Fotos/jose.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div> -->
+            
+        
+        
+    </main>
+    <footer>
+        <div class="marcas">
+            <div class="marca_arriba">
+                <div class="escudo_arriba"> <img class="escudito" src="../Fotos/torpe.png" width="200"  alt="fail"></div> 
+                <div class="escudo_abajo"></div>
+            </div>
+            <div class="marca_abajo">
+                <div class="sponsors" id="s1"></div>
+                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
+                <div class="sponsors" id="s2"></div>
+                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
+                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <div class="sponsors" id="s3"></div>
+                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
+                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
+                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+
+            </div>
+        </div>
+        <div class="info">
+            <div class="sep"></div>
+
+            <div class="redes"  >
+                <div class="col-sm-12 col-md-6 py-3" >
+                    <h2>Donde encontrarnos</h2>
+                    <p><i data-feather="map-pin"></i> Polideportivo Carrasco</p>   
+                    <div class="embed-responsive embed-responsive-16by9" style="width: 100%;">
+                      <iframe class="embed-responsive-item" src="https://maps.google.com/maps?q=polideportivo%20carrasco&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                </div>
+            <div class="informacion col-sm-12 col-md-6 py-3">
+                <div class="redes_contacto" style="height: 100%;">
+                    <div style="margin-right: 20px;">
+                        <h2 >Redes sociales oficiales</h2>
+                        <ul>
+                        <li><a href="" ><i  class="icon_menu" data-feather="instagram"></i>  <b>Siguenos en instagram</b></a></li>
+                        <li><a href=""><i  class="icon_menu" data-feather="twitter"></i>  <b>Siguenos en twitter</b></a></li>
+                        </ul>
+                    </div>  
+                    <div id="contacto_1" >
+                        <h2>Informacion de contacto</h2>
+                        <ul>
+                            <li><a href=""><i  class="icon_menu" data-feather="mail"></i>  <b>montevideocitytorpe@gmail.com</b></a></li>
+                            <li><a href=""><i  class="icon_menu" data-feather="edit"></i>  <b>Puedes escribirnos aqui</b></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="derechos">
+            <div class="copiright">
+                © 2021 Montevideo City Torpe 
+            </div>   
+            <div class="compania">
+               <p><a href="">Informacion de Compania</a> | <a href="">Privacion y politica</a> | <a href="">Terminos y condiciones</a></p>
+            </div>
+        </div>
+       
+    </footer>
+    
+</body>
+
+
+
+</html>

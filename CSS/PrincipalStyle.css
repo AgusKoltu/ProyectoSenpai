@@ -330,6 +330,13 @@ input[type=text], select, textarea {
   grid-gap: 30px;
 }
 
+
+.container_galeria{
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 40px;
+}
+
 .rival {
   background-image: url("../Fotos/fondoProductos.jpg");
   border: 5px solid black;
@@ -351,6 +358,10 @@ input[type=text], select, textarea {
     object-fit: cover;
   
 }
+
+
+
+
 
 
 
@@ -418,9 +429,6 @@ input[type=text], select, textarea {
 }
 
 
-
-
-
 .product .product__content{
   margin: 10px;
   transition: 1s;
@@ -470,15 +478,7 @@ input[type=text], select, textarea {
 }
 
 
-
-
-
 /* FIN MAIN DEL SHOP*/
-
-
-
-
-
 
 /*FIN DEL MAIN*/
 footer{
@@ -783,7 +783,7 @@ li a{
 
 
 
-a{
+.footer a{
   display: contents;
   
 }
