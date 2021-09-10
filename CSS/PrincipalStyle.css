@@ -326,8 +326,20 @@ input[type=text], select, textarea {
 /*  MAIN DE GALERIA*/
 .container_rivales{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 30px;
+  padding-bottom: 30px;
+}
+
+
+.container_rivales a{
+  text-decoration: none !important;
+  list-style-type: none !important; 
+  color: white;
+}
+
+.container_rivales a:hover{
+  color: black;
 }
 
 
@@ -338,11 +350,13 @@ input[type=text], select, textarea {
 }
 
 .rival {
-  background-image: url("../Fotos/fondoProductos.jpg");
+  background-image: url("../Fotos/FondoRivales.jpg");
   border: 5px solid black;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
+  
 }
 
 .product__img{
@@ -358,7 +372,6 @@ input[type=text], select, textarea {
     object-fit: cover;
   
 }
-
 
 
 
@@ -731,6 +744,12 @@ li a svg{
   }
   /*fin  main shop*/
 
+  /* main Galeria*/
+  .container_rivales{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Fin main Galeria*/
+
 
 
 @media (min-width:1025px) {
@@ -777,6 +796,12 @@ li a{
     width: 0%;
   }
   /*fin main inicio*/
+
+  /* main Galeria*/
+  .container_rivales{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Fin main Galeria*/
 
 
 
