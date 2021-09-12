@@ -213,6 +213,65 @@ main{
 }
 
 
+.section1{
+  display: grid;
+  grid-template-areas: "tabla_liga article";
+  
+  grid-template-columns: 1fr 5fr;
+  
+  gap:20px;
+  padding: 30px;
+}
+
+
+
+
+.tabla_liga {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-radius:  20px !important;
+  
+  font-family: "Archivo Black";
+  font-size: 0.9rem;
+
+}
+
+.tabla_liga th, .tabla_liga td {
+  text-align: center;
+  padding: 8px;
+}
+
+.tabla_liga td{
+border-bottom: 2px solid #f2f2f2;
+}
+
+.tabla_liga th{
+  border-bottom: 5px solid #f2f2f2;
+  }
+
+
+tr:nth-child(even) {
+  background-color: white;
+  
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+
+}
+
+#tr_torpe{
+  color:#fff;
+  background-color: skyblue;
+}
+
+tr:first-child{
+  border-radius: 20px;
+}
+
+
+
 
 /* MAIN DEL CONTACTO*/
 .container_contact{
@@ -406,15 +465,12 @@ input[type=text], select, textarea {
   text-decoration: none ;
   list-style-type: none ;
 }
-.jugadores a{
-  
-}
 
 
 
 
 .jugador_content{
-  border: 5px solid black;
+  border: 2px solid black;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
