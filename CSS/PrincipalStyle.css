@@ -347,6 +347,7 @@ input[type=text], select, textarea {
   margin-left: 10vh;
   margin-right: 10vh;
   margin-top: 40px;
+  padding-bottom: 100px;
 }
 
 .rival {
@@ -380,12 +381,114 @@ input[type=text], select, textarea {
 
 
 /* FIN MAIN DE GALERIA*/
+/*  MAIN DE PLANTEL*/
+
+.jugadores{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+.jugador{
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to left, white 50%, lightblue 50%) right;
+  background-size: 200%;
+  transition: .3s ease-out;
+}
+
+.jugador:hover{
+  color: white;
+  background-position: left;
+}
+.jugadores a:hover{
+  text-decoration: none ;
+  list-style-type: none ;
+}
+.jugadores a{
+  
+}
+
+
+
+
+.jugador_content{
+  border: 5px solid black;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.container_posicion{
+  font-family: MontserratSemiBold,Helvetica,sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding-bottom: 10px;
+  width: 100%;
+  color: #1a1a1a;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 40px 0;
+}
+
+
+
+/*FONDOS DE JUGADORES */
+
+#j1{
+  background-image: url("../Fotos/Jugadores/Toti2.png");
+}
+
+#j1:hover{
+  background-image: url("../Fotos/Jugadores/Toti3.png");
+}
+
+#j2{
+  background-image: url("../Fotos/Jugadores/Borras2.png");
+}
+
+#j2:hover{
+  background-image: url("../Fotos/Jugadores/Borras1.png");
+}
+
+#jx{
+  background-image: url("../Fotos/Jugadores/Template.png");
+}
+
+#jx:hover{
+  background-image: url("../Fotos/Jugadores/Template.png");
+}
 
 
 
 
 
 
+.jugador_numero{
+  font-family:Holtwood One SC;
+  padding-top: 10%;
+  padding-right: 30%;
+  grid-column: 1;
+  grid-row: 1;
+}
+.jugador_nombre{
+  font-family:Holtwood One SC;
+  font-size: 25px;
+  padding-top: 25%;
+  position:sticky;
+  width: 100%;
+  text-align: initial;
+  grid-column: 1/span2;
+  grid-row: 2;
+}
+
+/*  FIN MAIN DE PLANTEL*/
 /* MAIN DEL SHOP*/
 
 .container{
@@ -744,6 +847,12 @@ li a svg{
   }
   /*fin  main shop*/
 
+  .jugadores{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
   /* main Galeria*/
   .container_rivales{
     grid-template-columns: repeat(2, 1fr);
@@ -796,6 +905,12 @@ li a{
     width: 0%;
   }
   /*fin main inicio*/
+
+  /* main Plantel*/
+  .jugadores{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Fin main Plantel*/
 
   /* main Galeria*/
   .container_rivales{
