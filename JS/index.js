@@ -1,4 +1,4 @@
-const elBoton = document.querySelector("button");
+const elBoton = document.querySelector(".btn_hamburguer");
 const navMenu = document.querySelector(".nav_1");
 elBoton.addEventListener("click", () =>  {
     navMenu.classList.toggle("nav_menu_visible");
@@ -39,7 +39,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = " block";
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }

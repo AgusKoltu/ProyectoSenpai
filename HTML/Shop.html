@@ -8,14 +8,39 @@
     <title>City Torpe</title>
     <link rel="shortcut icon" href="../Fotos/torpe.png">
     <link rel="stylesheet" href="../CSS/PrincipalStyle.css">
+    <link rel="stylesheet" href="../CSS/Shop_Header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script defer src="../JS/index.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://kit.fontawesome.com/45d333caf9.js" crossorigin="anonymous"></script>
 </head>
-<script src="https://unpkg.com/feather-icons"></script>
+<!-- <a href=""><i id="icono_5" class="icon_shop" data-feather="shopping-cart"></i> <span id="total-products">0</span></a> -->
 <body>
+    <div class="header_usuario">
+       <ul class="nav_usuario">
+           <li class=user_menu_item><a href=""> Mi cuenta</a></li>
+           <li class=user_menu_item>
+                <div class="dropdown">
+                    <button class="dropbtn"><i data-feather="shopping-cart"></i><span style="padding-left: 10px;" id="total-products">0</span></button>
+                    <div class="dropdown-content">
+                        <div class="carrito">
+                            <h3>Mi Carrito</h3>
+                            <ul id="cart-holder">
+                
+                            </ul>
+                           
+                            <p style="text-align: center;">Subtotal del carrito:: $<span id="total-holder">0</span></p>
+                            <div class="container_pagar">
+                               <span id="pagar"></span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </li>
+       </ul>
+    </div>
     <header>
         <img class="logo" src="../Fotos/Escudo.png" width = "100"  alt="rr">
         <nav>
@@ -32,13 +57,8 @@
                     <a href="Contacto.html" class="nav_menu_link"><i id="icono_5" class="icon_menu" data-feather="phone"></i>CONTACTO</a></li>
             </ul>
         </nav>
-        <a class="boton" href="#"><button><i class="icon_despliegue" data-feather="align-justify"></i></button> </a>
-        <a href="" id="boton-usuario">
-            <i id="icono_5" class="icon_shop" data-feather="user"></i>
-        </a>
-        <a href="" id="boton-carrito">
-            <i id="icono_5" class="icon_shop" data-feather="shopping-cart"></i>
-        </a>
+        <a class="boton" href="#"><button class="btn_hamburguer"><i class="icon_despliegue" data-feather="align-justify"></i></button> </a>
+    
     </header>
 
     <main class="main">
@@ -48,87 +68,10 @@
                 <h2 id="border2">Nuestros Productos </h2>
                 <hr class="border_cell" id="border3"> 
             </div>
-            <section class="container-products">
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 1</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 2</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 3</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 4</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 5</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="product">
-                <div class="product__content">
-                    <img src="../Fotos/torpe.png" alt="" class="product__img">
-                    <div class="product__description">
-                        <h3 class="product__title">Producto 6</h3>
-                        <span class="product__price">$500.00</span><br>
-                        <a href="" class="btn" >
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            
+            <section id='product-holder' class="container-products"></div>
+       
         </div>
+     
           
     </main>
     <footer>
@@ -139,17 +82,17 @@
             </div>
             <div class="marca_abajo">
                 <div class="sponsors" id="s1"></div>
-                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
-                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
+                <a href="https://www.gonzalocastro.edu.uy " target="_blank"><img src="../Fotos/Sponsors/castro.png"   style="width: 20vh;" alt=""></a>
+                <a href="https://www.facundogarcia.com"  target="_blank"><img src="../Fotos/Sponsors/Toti.png" style="width: 15vh;" alt=""></a>
                 <div class="sponsors" id="s2"></div>
-                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
-                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
-                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <a href="https://www.instagram.com/mjaequipamientos/?hl=es"  target="_blank"><img src="../Fotos/Sponsors/mja.png" alt=""></a>
+                <a href="http://www.ligasiete.com.uy"  target="_blank"><img src="../Fotos/Sponsors/logo.full.png" alt=""></a>
+                <a href="https://www.gonzalocastro.edu.uy"  target="_blank"><img src="../Fotos/Sponsors/castro.png"   style="width: 20vh;" alt=""></a>
                 <div class="sponsors" id="s3"></div>
-                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
-                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
-                <a href=""><img src="../Fotos/logo.full.png" alt=""></a>
-                <a href=""><img src="../Fotos/adidas.webp" alt=""></a>
+                <a href="http://www.ligasiete.com.uy"  target="_blank"><img src="../Fotos/Sponsors/logo.full.png" alt=""></a>
+                <a href="https://www.instagram.com/merlin_growshop/?hl=es"  target="_blank"><img src="../Fotos/Sponsors/merlin.png" alt=""></a>
+                <a href="https://www.facundogarcia.com"  target="_blank"><img src="../Fotos/Sponsors/Toti.png" style="width: 15vh;" alt=""></a>
+                <a href="https://www.instagram.com/mjaequipamientos/?hl=es"  target="_blank"><img src="../Fotos/Sponsors/mja.png" alt=""></a>
 
             </div>
         </div>
@@ -169,15 +112,15 @@
                     <div style="margin-right: 20px;">
                         <h2 >Redes sociales oficiales</h2>
                         <ul>
-                        <li><a href="" ><i  class="icon_menu" data-feather="instagram"></i>  <b>Siguenos en instagram</b></a></li>
-                        <li><a href=""><i  class="icon_menu" data-feather="twitter"></i>  <b>Siguenos en twitter</b></a></li>
+                        <li><a href="https://www.instagram.com/mvdcitytorpe/?hl=es" target="_blank" ><i  class="icon_menu" data-feather="instagram"></i>  <b>Siguenos en instagram</b></a></li>
+                        <li><a href="https://twitter.com/citytorpe?lang=es" target="_blank"><i  class="icon_menu" data-feather="twitter"></i>  <b>Siguenos en twitter</b></a></li>
                         </ul>
                     </div>  
                     <div id="contacto_1" >
                         <h2>Informacion de contacto</h2>
                         <ul>
-                            <li><a href=""><i  class="icon_menu" data-feather="mail"></i>  <b>montevideocitytorpe@gmail.com</b></a></li>
-                            <li><a href=""><i  class="icon_menu" data-feather="edit"></i>  <b>Puedes escribirnos aqui</b></a></li>
+                            <li><a><i  class="icon_menu" data-feather="mail"></i>  <b>montevideocitytorpe@gmail.com</b></a></li>
+                            <li><a href="Contacto.html" target="_blank"><i  class="icon_menu" data-feather="edit"></i>  <b>Puedes escribirnos aqui</b></a></li>
                         </ul>
                     </div>
                 </div>
@@ -199,7 +142,33 @@
     </footer>
     
 </body>
+<script src="../JS/product.js"></script>
+<script src="../JS/cart.js"></script>
+<script>
+    const productHolder = document.getElementById('product-holder');
+    const cartHolder = document.getElementById('cart-holder')
+    const totalHolder = document.getElementById('total-holder')
+    const totalProducts = document.getElementById('total-products')
+    const botonPagar = document.getElementById('pagar')
+    const Carrito = document.getElementsByClassName("dropdown-content")[0];
+    
+    
+   
 
+
+    let products = initializeProducts()
+
+
+    products.forEach(product => {
+            productHolder.innerHTML += product.cargarProducto()
+        })
+
+        let cart = []
+    
+
+
+
+</script>
 
 
 </html>
