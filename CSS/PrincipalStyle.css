@@ -33,6 +33,7 @@ header {
   height: 60px;
 }
 
+
 .boton{
   display: flex;
   justify-content: flex-end;
@@ -227,6 +228,8 @@ main{
 
 .btn_slider .btn{
   font-family: Holtwood One SC;
+  background-color: rgba(135, 206, 235,0.4);
+  
   position: relative;
   display: inline-block;
   border-color: black;
@@ -654,6 +657,7 @@ input[type=text], select, textarea {
 
 
 .container{
+  
   padding-top: 20px;
   text-align: center;
   padding-bottom: 35vh;
@@ -688,11 +692,13 @@ input[type=text], select, textarea {
 
 
 .container-products {
+  
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 30px;
 }
 .product {
+  
   background-image: url("../Fotos/fondoProductos.jpg");
   border: 5px solid black;
   text-align: center;
@@ -708,6 +714,7 @@ input[type=text], select, textarea {
 
 
 .product .product__content{
+ 
   margin: 10px;
   transition: 1s;
 }
@@ -720,7 +727,7 @@ input[type=text], select, textarea {
 
 .product__description{
   
-  font-family: "Avant Garde Bold",Arial,sans-serif;
+  font-family: Holtwood One SC;
   color: #000;
   position: sticky;
   transition: 1s;
@@ -1325,5 +1332,4 @@ li a{
 
 
 
-
-
+}

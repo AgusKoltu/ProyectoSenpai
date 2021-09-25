@@ -10,7 +10,8 @@
 
 
 #title_galery{
-    background-color: #000cb3;
+    font-family: Holtwood One SC;
+    background-color: navy;
     color: white;
     padding-bottom: 1px;
     border-radius: 20px 20px 0 0;
@@ -46,6 +47,7 @@
   .column_galery {
     float: left;
     width: 100%;
+    max-height:220px;
     margin: auto;
     overflow: hidden;
   }
@@ -168,7 +170,7 @@
     opacity: 1;
   }
   
-  img.hover-shadow {
+.hover-shadow {
     transition: 0.3s;
   }
   

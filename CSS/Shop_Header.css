@@ -6,6 +6,7 @@ header{
 }
 
 main{
+    
     padding-top: 110px !important;
 }
 
@@ -32,8 +33,11 @@ main{
 }
 .user_menu_item a:hover{
     text-decoration: none;
+    color: white;
 
 }
+
+
 
 
 .dropbtn {
@@ -46,6 +50,9 @@ main{
 
 
 .dropdown-content {
+  overflow-y: scroll;
+  max-height: 500px; 
+  transition: all .5s ease;
   display:none;
   position: absolute;
   background-color:white;
@@ -62,36 +69,42 @@ main{
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {
-    
-}
 
-#cart-holder{
-    
-}
+
+
 
 .item_cart{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+   
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
     margin: 10px;
     padding-bottom: 20px;
     padding-top: 10px;
     border-bottom: 1px solid #695E61;
-    
-    
-    
+}
+
+.cart_description{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cart_price{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .precio_p{
+    
     margin: 0 !important;
 }
 
 .btn_borrar{
     display: inline-block;
     padding: 5px 10px;
+    height: 25px;
     font-size: 10px;
     cursor: pointer;
     text-align: center;
@@ -102,6 +115,10 @@ main{
     border: none;
     border-radius: 15px;
    
+}
+
+.btn_borrar:focus{
+  outline: none;
 }
 
 .btn_borrar:active {
@@ -146,6 +163,7 @@ main{
 }
 
 .hover{
+  transition: all .5s ease;  
   display:block ;
   position: absolute;
   background-color:white;
@@ -161,3 +179,32 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.button {
+    background-color:transparent; /* Green */
+    border: none;
+    color: black;
+    font-family: Holtwood One SC;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid  black;
+    border-radius: 10px;
+  }
+
+
+  
+
+  
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
+  .button:focus{
+    outline: none;
+  }

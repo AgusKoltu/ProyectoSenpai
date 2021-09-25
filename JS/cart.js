@@ -19,13 +19,22 @@ function renderCart() {
     total_products = 0;
     cart.forEach(cartLine => {
         total += cartLine.product.price * cartLine.quantity;
-        total_products += cartLine.quantity;
+        total_products += cartLine.quantity*1;
         cartHolder.innerHTML += `<li class="item_cart">
-                <p class="precio_p">${cartLine.product.name}</p>
-                <input type="number" style="width: 30px;" id="quantity${cartLine.product.id}" value="${cartLine.quantity}"/>
-                <p class="precio_p" id="priceById${cartLine.product.id}">${cartLine.product.price * cartLine.quantity}</p>
-               
-                  <button class="btn_borrar" onclick="outOfCart('${cartLine.product.id}')">QUITAR</button>
+        
+                <div style="display:flex; justify-content:center;align-items: center;">
+                    <img style="height:50px; object-fit: contain; " src="../Fotos/Productos/producto_${cartLine.product.id}.png" alt="" class="product__img">
+                </div>
+                <div class="cart_description">
+                    <p class="precio_p">${cartLine.product.name}</p>
+                    <div class="cart_price">
+                        <input type="number" style="width: 30px;" id="quantity${cartLine.product.id}" value="${cartLine.quantity}"/>
+                        <p class="precio_p" id="priceById${cartLine.product.id}">$${cartLine.product.price * cartLine.quantity}</p>
+                    </div>
+                </div> 
+                <div style="display:flex; align-items: center; justify-content: center;">   
+                    <button class="btn_borrar" onclick="outOfCart('${cartLine.product.id}')">QUITAR</button>
+                </div>
             </li>`
     })
     cart.forEach(cartLine => {

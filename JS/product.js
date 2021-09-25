@@ -14,8 +14,8 @@ class Product { // Representación de algo del mundo real.
                     <img style="height:200px; object-fit: contain;" src="../Fotos/Productos/producto_${this.id}.png" alt="" class="product__img">
                     <div class="product__description">
                         <h3 class="product__title">${this.name} </h3>
-                        <span class="product__price">${this.price}</span><br>
-                        <button  onclick="addToCart('${this.id}')"  class="btn">Lo quiero</button>
+                        <span class="product__price">$${this.price}</span><br>
+                        <button  onclick="addToCart('${this.id}')"  class="button button1">Agregar al Carrito</button>
                     </div>
                 </div>   
             </div>`
@@ -27,11 +27,11 @@ class Product { // Representación de algo del mundo real.
 function initializeProducts() {
     return [
         new Product(1, 'Producto 1', 100, 5),
-        new Product(2, 'Producto 2', 100, 5),
-        new Product(3, 'Producto 3', 100, 5),
-        new Product(4, 'Producto 4', 100, 5),
-        new Product(5, 'Producto 5', 100, 5),
-        new Product(6, 'Producto 6', 100, 5),         
+        new Product(2, 'Jarra Esmerilada', 250, 5),
+        new Product(3, 'Torpe Chela', 150, 5),
+        new Product(4, 'Torpe Taza', 200, 5),
+        new Product(5, 'Jarra Cervecera', 250, 5),
+        new Product(6, 'Destapador', 120, 5),         
     ]
 }
 
@@ -46,7 +46,7 @@ function addToCart(props) {
         } 
     })
     if (estaEnCarrito){
-        productoCarrito.quantity = productoCarrito.quantity + 1;
+        productoCarrito.quantity = productoCarrito.quantity*1 + 1;
     }
     else{
         cart.push(new Cart(products.find(cartLine => cartLine.id == props)))
@@ -71,6 +71,6 @@ function outOfCart(props){
     i++;
     })
     cart.splice(j,1);
-    renderCart()
+    renderCart();
 
 }
